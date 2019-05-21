@@ -9,13 +9,13 @@
     <div class="container">
       <div class="gallery">
         <div class="scroller">
-          <div class="card url" v-for="(item,index) in todayRecommend" :key="index">
+          <router-link :to="{name:'MusicPlay',params:{songid:item.song_id}}" tag="div" class="card url" v-for="(item,index) in todayRecommend" :key="index">
             <div class="album">
               <img :src="item.pic_big" :alt="item.title">
               <div class="name">{{ item.title }}</div>
               <div class="author">{{ item.artist_name }}</div>
             </div>
-          </div>
+          </router-link>
         </div>
       </div>
     </div>

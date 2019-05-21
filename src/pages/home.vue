@@ -1,12 +1,13 @@
 <template>
     <div class="home">
-      <TodayRecommend/>
+      <TodayRecommend title="今日推荐" type="2"/>
       <NewMusic/>
       <SwpierBanner/>
       <MusicListNav/>
       <keep-alive>
         <router-view/>
       </keep-alive>
+      <TodayRecommend title="经典老歌" type="22"/>
     </div>
 </template>
 

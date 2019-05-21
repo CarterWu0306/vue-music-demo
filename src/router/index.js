@@ -9,7 +9,9 @@ import Search from '@/pages/search'
 import HotList from "@/pages/musiclist/hot_list"
 import KingList from "@/pages/musiclist/king_list"
 import NewList from "@/pages/musiclist/new_list"
-
+import MoreList from "@/pages/morelist"
+import MusicPlay from "@/pages/musicplay"
+import ArtistsDetails from "@/pages/artistsDetails/artistsDetails"
 
 Vue.use(Router)
 
@@ -56,8 +58,23 @@ export default new Router({
         {
           path:"search",
           component:Search
+        },
+        {
+          path:"more",
+          name:"MoreList",
+          component:MoreList
+        },
+        {
+          path:"artistsDetails",
+          name:"ArtistsDetails",
+          component:ArtistsDetails
         }
       ]
+    },
+    {
+      path:"/musicplay",
+      name:"MusicPlay",
+      component:MusicPlay
     }
   ]
 })
